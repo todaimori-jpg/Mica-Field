@@ -15,7 +15,7 @@ jobs:
         include:
           - runner: windows-2022
             platform: Windows-x64
-          - runner: macos-14
+          - runner: macos-15
             platform: macOS-universal
           - runner: ubuntu-24.04
             platform: Linux-x64
