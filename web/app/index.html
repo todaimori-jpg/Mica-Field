@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1d1e21">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mica Field">
+<meta name="description" content="A standalone ambient synthesizer for iPad with six synthesis modes, touch modulation and stereo WAV recording.">
+<title>Mica Field · iPad Instrument</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main id="app" aria-label="Mica Field synthesizer">
+  <div id="stage">
+    <canvas id="instrument" aria-label="Synth controls. Drag knobs vertically. Tap a modulation source then its destination." tabindex="0"></canvas>
+    <select id="presets" aria-label="Factory preset"></select>
+    <button id="audioToggle" class="canvas-overlay" aria-label="Enable audio"></button>
+    <div id="boot">
+      <div class="boot-mark" aria-hidden="true">M</div>
+      <p class="eyebrow">MICA FIELD / IPAD INSTRUMENT</p>
+      <h1>Room to drift.</h1>
+      <p id="bootText">Six synthesis modes. One quiet workspace.</p>
+      <button id="enableAudio" class="primary">Enable audio</button>
+      <p class="boot-hint">Landscape gives you the full instrument layout.</p>
+    </div>
+  </div>
+  <footer id="touchBar">
+    <span id="status" role="status">Loading instrument…</span>
+    <output id="signal" aria-label="Output peak" data-peak="0">0 voices</output>
+    <button id="keyboardButton">Keyboard</button>
+    <button id="holdButton" aria-pressed="false">Hold</button>
+    <button id="panicButton">Panic</button>
+    <button id="recordButton" aria-pressed="false">● REC</button>
+    <button id="saveTake" hidden>Save WAV</button>
+    <button id="menuButton" aria-label="Instrument menu">☰</button>
+  </footer>
+</main>
+<dialog id="sheet">
+  <header><h2 id="sheetTitle"></h2><button id="closeSheet" aria-label="Close">×</button></header>
+  <div id="sheetBody"></div>
+</dialog>
+<input id="sampleFile" type="file" accept="audio/*,.wav,.aif,.aiff,.mp3,.flac,.m4a,.ogg" hidden>
+<input id="patchFile" type="file" accept=".mica,application/octet-stream" hidden>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

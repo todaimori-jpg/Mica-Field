@@ -2,6 +2,12 @@
 
 A standalone desktop synthesizer and VST3 for ambient and experimental sound design. Both formats share the same C++ engine, interface and patch files.
 
+## Use on iPad
+
+Open **[Mica Field for iPad](https://mica-field-ipad.orwellianinstitute.chatgpt.site)** in Safari, rotate to landscape, tap **Enable audio**, then play the **Keyboard**. **Hold** latches drones. **REC → Stop → Save WAV → Save to Files** exports your take. Safari **Share → Add to Home Screen** adds the instrument to your iPad.
+
+The iPad edition runs the same C++ DSP in WebAssembly, defaults to four voices and uses touch controls. It records stereo 16-bit WAV and exchanges `.mica` patches with the desktop instrument. Keep it in the foreground while playing or recording. See [web/README.md](web/README.md) for hosting, offline behavior, memory details and the reproducible engine build. Desktop VST3 downloads do not run on iPadOS.
+
 ## Play and record
 
 1. Open **Mica Field** from the Standalone build. Use the gear in the top right to choose your audio output and enable a MIDI controller.

@@ -1,0 +1,6 @@
+{
+  "name": "mica-field-ipad",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node checks.mjs" }
+}
