@@ -1,0 +1,7 @@
+build*/
+out/
+.vs/
+.idea/
+.DS_Store
+*.user
+*.mica
